@@ -23,8 +23,12 @@ Thumbs.db
 .opencode/mcp.json
 .amazonq/mcp.json
 .windsurf/mcp.json
+# Maven target directory
+target/
+
 # Global-only agents (not engine-scaffolded, but may exist)
 .cline/mcp.json
+
 
 # AI-DLC Documentation
 aidlc-docs/
