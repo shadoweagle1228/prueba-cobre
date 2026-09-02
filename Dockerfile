@@ -1,12 +1,10 @@
-# Build Stage
-FROM eclipse-temurin:21-jdk-alpine AS build
+FROM maven:3.9-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 COPY notification_events.json .
-RUN ./mvnw package -DskipTests || mvn package -DskipTests || true
+RUN mvn package -DskipTests
 
-# Runtime Stage
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
