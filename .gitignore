@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE MCP configs (may contain credentials or PATs)
+# 15 workspace-level configs from aidlc-kit I-11
+.amp/mcp.json
+.augment/mcp.json
+.mcp.json
+.codebuddy/mcp.json
+.codex/mcp.json
+.vscode/mcp.json
+.cursor/mcp.json
+.gemini/settings/mcp.json
+.kilocode/mcp.json
+.kiro/settings/mcp.json
+.opencode/mcp.json
+.amazonq/mcp.json
+.windsurf/mcp.json
+# Global-only agents (not engine-scaffolded, but may exist)
+.cline/mcp.json
+
+# AI-DLC Documentation
+aidlc-docs/
+
