@@ -26,10 +26,10 @@ public class NotificationController {
 
     private String getAuthenticatedClientId() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth == null || auth.getPrincipal() == null) {
+        if (auth == null || auth.getName() == null) {
             throw new RuntimeException("Unauthorized client");
         }
-        return auth.getPrincipal().toString();
+        return auth.getName();
     }
 
     @GetMapping
