@@ -33,3 +33,5 @@ target/
 # AI-DLC Documentation
 aidlc-docs/
 
+# Antigravity Config
+.gemini/
