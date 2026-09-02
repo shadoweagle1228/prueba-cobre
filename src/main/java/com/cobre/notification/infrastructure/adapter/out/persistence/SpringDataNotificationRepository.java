@@ -17,9 +17,9 @@ public interface SpringDataNotificationRepository extends JpaRepository<Notifica
     Optional<NotificationEntity> findByEventIdAndClientId(String eventId, String clientId);
 
     @Query("SELECT e FROM NotificationEntity e WHERE e.clientId = :clientId " +
-           "AND (:startDate IS NULL OR e.deliveryDate >= :startDate) " +
-           "AND (:endDate IS NULL OR e.deliveryDate <= :endDate) " +
-           "AND (:status IS NULL OR e.deliveryStatus = :status)")
+           "AND (cast(:startDate as timestamp) IS NULL OR e.deliveryDate >= :startDate) " +
+           "AND (cast(:endDate as timestamp) IS NULL OR e.deliveryDate <= :endDate) " +
+           "AND (cast(:status as text) IS NULL OR e.deliveryStatus = :status)")
     Page<NotificationEntity> findByClientIdWithFilters(
             @Param("clientId") String clientId,
             @Param("startDate") LocalDateTime startDate,
