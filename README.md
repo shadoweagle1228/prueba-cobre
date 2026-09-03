@@ -114,7 +114,7 @@ Si una notificación falló, el cliente puede forzar su reintento a través de l
 
 **Petición:**
 ```bash
-curl -X POST -H "X-Client-Id: CLIENT002" "http://localhost/notification_events/EVT003/retry"
+curl -X POST -H "X-Client-Id: CLIENT002" "http://localhost/notification_events/EVT003/replay"
 ```
 
 ---
